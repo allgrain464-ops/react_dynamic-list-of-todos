@@ -96,9 +96,7 @@ export class App extends React.Component<{}, State> {
         (status === 'active' && !todo.completed) ||
         (status === 'completed' && todo.completed);
 
-      const matchesQuery = todo.title
-        .toLowerCase()
-        .includes(normalizedQuery);
+      const matchesQuery = todo.title.toLowerCase().includes(normalizedQuery);
 
       return matchesStatus && matchesQuery;
     });
